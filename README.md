@@ -1,4 +1,5 @@
 💰 Banking System in Python
+
 This project is a simple banking system built with Python as part of a learning challenge. It allows users to simulate basic banking operations directly through the terminal.
 
 ✅ Features
