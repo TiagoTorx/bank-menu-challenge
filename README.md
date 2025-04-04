@@ -1,26 +1,62 @@
-💰 Banking System in Python
+# 💻 Simple Banking System (Python Project)
+This project is a simple banking system built using Python with a procedural approach. It allows users to perform essential banking operations such as deposits, withdrawals, viewing account statements, user registration, and account creation.
 
-This project is a simple banking system built with Python as part of a learning challenge. It allows users to simulate basic banking operations directly through the terminal.
+---
 
-✅ Features
-- Deposit:
-  - Only accepts positive values
-  - Each deposit is recorded in the account statement
+## ✅ Features
 
-- Withdrawal:
-  - Maximum of R$500 per transaction
-  - Up to 3 withdrawals allowed per day
-  - Checks for sufficient balance
-  - Displays the number of withdrawals already made
-  - Each withdrawal is recorded in the statement
+### 💰 Deposit
+- Accepts **positional-only** arguments.
+- Only accepts positive values.
+- Updates balance and transaction history.
 
-- Account Statement:
-  - Shows all transactions (deposits and withdrawals)
-  - Displays current balance
-  - Informs the user if no transactions have been made
+### 💸 Withdrawal
+- Accepts **keyword-only** arguments.
+- Checks for:
+  - Balance availability
+  - Withdrawal limit per operation
+  - Maximum daily number of withdrawals
+- Updates balance, history, and withdrawal count.
 
-🧠 Business Rules
-- All values are displayed in the format R$ xx.xx
-- Invalid inputs are not processed
-- The main menu runs in a loop until the user chooses to exit
-- Clear feedback is provided after each action
+### 📄 Statement (Extrato)
+- Shows all transactions and current balance.
+- Accepts:
+  - Balance as **positional-only**
+  - History as **keyword-only**
+
+### 👤 User Registration
+- Registers users with:
+  - Full name
+  - Date of birth
+  - CPF (Brazilian ID number)
+  - Address
+- Prevents duplicate CPFs.
+
+### 🏦 Bank Account Creation
+- Accounts have:
+  - Fixed agency number: `0001`
+  - Sequential account number
+  - Linked to a previously registered user
+
+### 📋 List Accounts
+- Lists all created accounts with holder and account details.
+
+---
+
+## 🧠 Concepts Applied
+
+- **Function parameters**: positional-only `/`, keyword-only `*`, and mixed
+- Use of **lists and dictionaries** to manage users and accounts
+- CPF lookup using `next()` and generator expressions
+- **Interactive menu** with `while True`
+- Clear function separation for readability and reuse
+
+---
+
+## 📁 Structure
+
+This project is written in a single `.py` file for simplicity and ease of testing.
+
+---
+
+✅ Designed as a learning challenge to solidify Python fundamentals related to data structures, function design, and user interaction.
