@@ -1,55 +1,52 @@
-# 💻 Simple Banking System (Python Project)
-This project is a simple banking system built using Python with a procedural approach. It allows users to perform essential banking operations such as deposits, withdrawals, viewing account statements, user registration, and account creation.
+# 💰 Challenge: Banking System with Object-Oriented Programming (OOP)
+
+This project is a complete solution to a challenge focused on **designing a banking system** using **Object-Oriented Programming** principles in Python. The system simulates banking operations such as creating clients and accounts, depositing, withdrawing, and viewing transaction history.
 
 ---
 
-## ✅ Features
+## ✅ Objectives Achieved
 
-### 💰 Deposit
-- Accepts **positional-only** arguments.
-- Only accepts positive values.
-- Updates balance and transaction history.
-
-### 💸 Withdrawal
-- Accepts **keyword-only** arguments.
-- Checks for:
-  - Balance availability
-  - Withdrawal limit per operation
-  - Maximum daily number of withdrawals
-- Updates balance, history, and withdrawal count.
-
-### 📄 Statement (Extrato)
-- Shows all transactions and current balance.
-- Accepts:
-  - Balance as **positional-only**
-  - History as **keyword-only**
-
-### 👤 User Registration
-- Registers users with:
-  - Full name
-  - Date of birth
-  - CPF (Brazilian ID number)
-  - Address
-- Prevents duplicate CPFs.
-
-### 🏦 Bank Account Creation
-- Accounts have:
-  - Fixed agency number: `0001`
-  - Sequential account number
-  - Linked to a previously registered user
-
-### 📋 List Accounts
-- Lists all created accounts with holder and account details.
+- [x] Full implementation of a banking system using classes and objects.
+- [x] Application of the 4 pillars of OOP:
+  - **Encapsulation**
+  - **Abstraction**
+  - **Inheritance**
+  - **Polymorphism**
+- [x] Classes designed according to the provided UML diagram:
+  - `Cliente` (abstract representation of users)
+  - `PessoaFisica` (inherits from Cliente)
+  - `Conta` (base class for accounts)
+  - `ContaCorrente` (inherits from Conta)
+  - `Historico` (tracks transactions)
+  - `Transacao` (abstract class)
+  - `Saque` and `Deposito` (inherit from Transacao)
+- [x] CPF validation and duplicate checking
+- [x] Support for multiple accounts per customer
+- [x] Input validation for numeric fields using `try/except`
+- [x] Clean output formatting with `__str__()` in key classes
 
 ---
 
-## 🧠 Concepts Applied
+## 💡 System Features
 
-- **Function parameters**: positional-only `/`, keyword-only `*`, and mixed
-- Use of **lists and dictionaries** to manage users and accounts
-- CPF lookup using `next()` and generator expressions
-- **Interactive menu** with `while True`
-- Clear function separation for readability and reuse
+- Register users with CPF, name, birth date, and address
+- Create accounts linked to users
+- Choose from multiple accounts per client
+- Perform **deposits** and **withdrawals**
+- Generate **transaction history** (statement) showing date, type, and value
+- List all registered accounts
+- Clear and user-friendly error/success messages
+
+---
+
+## 📚 Key Learnings
+
+This project reinforced several important concepts:
+
+- Structuring code using object-oriented programming
+- Using `@property` to protect sensitive attributes
+- Reusability and separation of responsibilities
+- Good practices like input validation, modularization, and DRY code
 
 ---
 
